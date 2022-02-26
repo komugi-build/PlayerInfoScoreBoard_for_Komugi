@@ -9,7 +9,7 @@ use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
-use space\yurisi\Command\johoCommand;
+use space\yurisi\Command\infoCommand;
 use space\yurisi\Task\SendTask;
 
 class playerInfoScoreBoard extends PluginBase implements Listener {
