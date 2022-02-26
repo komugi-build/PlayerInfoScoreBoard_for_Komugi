@@ -15,15 +15,15 @@ class johoCommand extends Command {
 
   public function __construct(PlayerInfoScoreBoard $main) {
     $this->main = $main;
-    parent::__construct("joho", "情報欄のon/off", "/joho");
+    parent::__construct("info", "ステータスのon/off", "/info");
   }
 
   public function execute(CommandSender $sender, string $label, array $args) {
     if (!$sender instanceof Player) return false;
-    $msg = ["OFF", "ON"];
+    $msg = ["無効", "有効"];
     $this->main->changeParam($sender);
     $this->main->isOn($sender) ? $flag = 1 : $flag = 0;
-    $sender->sendMessage("[PlayerInfoScoreBoard]§a{$msg[$flag]}にしました。");
+    $sender->sendMessage("§b >> ステータス表示を{$msg[$flag]}にしました。");
     return true;
   }
 
