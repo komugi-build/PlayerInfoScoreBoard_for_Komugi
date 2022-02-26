@@ -9,7 +9,7 @@ use pocketmine\player\Player;
 
 use space\yurisi\PlayerInfoScoreBoard;
 
-class johoCommand extends Command {
+class infoCommand extends Command {
 
   private PlayerInfoScoreBoard $main;
 
