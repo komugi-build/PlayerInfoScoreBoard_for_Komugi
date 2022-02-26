@@ -22,7 +22,7 @@ class playerInfoScoreBoard extends PluginBase implements Listener {
 
   public function onEnable(): void {
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    $this->getServer()->getCommandMap()->register($this->getName(), new johoCommand($this));
+    $this->getServer()->getCommandMap()->register($this->getName(), new infoCommand($this));
     $this->config = new Config($this->getDataFolder() . "player.yml", Config::YAML);
     $this->data = $this->config->getAll();
   }
@@ -38,7 +38,7 @@ class playerInfoScoreBoard extends PluginBase implements Listener {
 
   public function setTask(Player $player) {
     $task = new SendTask($player);
-    $this->getScheduler()->scheduleRepeatingTask($task, 5);
+    $this->getScheduler()->scheduleRepeatingTask($task, 20);
     $this->tasks[$player->getName()] = $task->getHandler();
   }
 
