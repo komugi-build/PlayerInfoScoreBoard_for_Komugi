@@ -21,8 +21,8 @@ class SendTask extends Task {
     $player = $this->player;
     $this->RemoveData($player);
     $this->setupData($player);
-    $this->sendData($player, "§a座標: " . $player->getPosition()->getFloorX() . "," . $player->getPosition()->getFloorY() . "," . $player->getPosition()->getFloorZ(), 1);
-    $this->sendData($player, "§aワールド: " . $player->getWorld()->getFolderName(), 2);
+    $this->sendData($player, "§b座標: " . $player->getPosition()->getFloorX() . "," . $player->getPosition()->getFloorY() . "," . $player->getPosition()->getFloorZ(), 1);
+    $this->sendData($player, "§bワールド: " . $player->getWorld()->getFolderName(), 2);
     $this->sendData($player, "§b現在時刻: " . date("G時i分"), 3);
     $this->sendData($player, "§c持ってるid: " . $player->getInventory()->getItemInHand()->getId() . ":" . $player->getInventory()->getItemInHand()->getMeta(), 4);
     $this->sendData($player, "§7基本コマンド説明", 5);
